@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Learning</title>
+<style>
+    
+body{
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button{
+    padding:10px 20px;
+    margin:5px;
+}
+
+input{
+    padding:10px;
+    width:200px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2 id="text">Hi I am Sneha</h2>
+
+<input type="text" id="userInput" placeholder="Enter your message"><br><br>
+
+<button style="background-color: aqua;" onclick="changeText()">Change Text</button>
+<button style="background-color: lightgreen;" onclick="addText()">Add Text</button>
+<button style="background-color: lightcoral;" onclick="removeText()">Remove Text</button>
+<button style="background-color: lightyellow;" onclick="styleText()">Change Style</button>
+<button style="background-color: orange;" onclick="showInput()">Show Input</button>
+
+<script>
+
+let element = document.getElementById("text");
+
+function changeText(){
+    element.innerHTML = "Text Changed Using JS";
+}
+
+function addText(){
+    element.innerHTML += " , I am Learning JS";
+}
+
+function removeText(){
+    element.innerHTML = "";
+}
+
+function styleText(){
+    element.style.color = "darkblue";
+    element.style.fontSize = "40px";
+    element.style.backgroundColor = "skyblue";
+}
+
+function showInput(){
+    let inputValue = document.getElementById("userInput").value;
+
+    if(inputValue === ""){
+        alert("Please enter something");
+    } else {
+        element.innerHTML = inputValue;
+    }
+}
+
+</script>
+
+</body>
+</html>
